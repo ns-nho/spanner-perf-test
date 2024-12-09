@@ -1,0 +1,9 @@
+services:
+  google-spanner:
+    image: gcr.io/cloud-spanner-emulator/emulator
+    platform: linux/amd64
+    ports:
+      - "9010:9010"
+      - "9020:9020"
+    environment:
+      - SPANNER_EMULATOR_HOST=google-spanner:9010
